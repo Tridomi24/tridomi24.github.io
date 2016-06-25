@@ -9,14 +9,12 @@ use Symfony\Component\HttpFoundation\Response;
 class IndexController extends Controller
 {
     /**
-     * @Route("/home/{pageName}")
+     * @Route("/")
      */
-    public function showAction($pageName)
+    public function showAction()
     {
-		return $this->render('Index/show.html.twig' , [
-			'name' => $pageName
-		]);
-		
+		return $this->render( 'Index/show.html.twig' );
+
         return new Response($html);
     }
 }
