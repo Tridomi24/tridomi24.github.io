@@ -6,15 +6,14 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
-class IndexController extends Controller
+class ProjectController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/projects")
      */
     public function showAction()
     {
-        return $this->render('index/index.html.twig');
+        return $this->render('Projects/projects.html.twig');
 
-        return new Response($html);
     }
 }

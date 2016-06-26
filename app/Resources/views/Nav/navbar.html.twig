@@ -1,0 +1,23 @@
+<!--
+    Author: Tristan Mitchell
+    Date: 25/06/2016
+    Purpose: contains the code for the navigation bar.
+-->
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset( 'bundles/framework/css/navbar.css' ) }}"/>
+{% endblock %}
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><img src="{{ asset( 'Tridomi_icon.png' ) }}"/></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/cv">Resume</a></li>
+            <li><a href="/skills">Skills</a></li>
+            <li><a href="/projects">Projects</a></li>
+        </ul>
+    </div>
+</nav>

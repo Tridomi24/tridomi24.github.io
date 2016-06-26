@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Welcome!{% endblock %}</title>
+
     {% block stylesheets %}
+        <link rel="stylesheet" type="text/css" href="{{ asset( 'bundles/framework/css/style.css' ) }}"/>
         <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
 
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+              integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+              crossorigin="anonymous">
 
     {% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('Tridomi_icon.png') }}"/>
 </head>
+
 <body>
-{% block body %}{% endblock %}
+
+
+<div class="container-fluid main">
+
+    {% block navigation %}
+        {% include 'Nav/navbar.html.twig' %}
+    {% endblock %}
+
+    {% block body %}
+
+
+    {% endblock %}
+
+    {% include 'Nav/footer.html.twig' %}
+
+</div>
 
 {% block javascripts %}
     <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
@@ -23,4 +44,5 @@
     <script type="text/javascript" src="/js/controllers.js"></script>
 {% endblock %}
 </body>
+
 </html>
