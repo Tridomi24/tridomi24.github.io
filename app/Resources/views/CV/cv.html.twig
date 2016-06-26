@@ -3,10 +3,427 @@
 {% block head %}
     <meta charset="UTF-8"/>
     <title>{% block title %} TridomiDesign {% endblock %}</title>
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+
 {% endblock %}
 
 {% block body %}
-    <h1> CV Page! </h1>
+    <div class="container-fluid">
+        <div class="cntr">
+            <h1> Resume </h1>
+            <hr/>
+            <span class=" glyphicon glyphicon-education"></span>
+            <h1> Education </h1>
+            <hr/>
+        </div>
+
+        <div class="panel-group" id="education">
+
+            <a data-toggle="collapse" data-parent="#education" href="#collapseNCL">
+                <div class="panel panel-default">
+
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-lg-6"><h2 class="panel-title">Newcastle University 2013-2016</h2></div>
+                            <div class="col-lg-6 right"><span class="glyphicon glyphicon-collapse-down"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div id="collapseNCL" class="panel-collapse collapse in">
+            <div class="panel-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <h3>Computer Science BSc Honours: Predicted 2:2</h3>
+
+                            <h4>Key Skills gained:</h4>
+                            <ul>
+                                <li>
+                                    Experienced gained in a variety of front end web technologies including: HTML5,
+                                    CSS3,
+                                    AngularJS and XHTML to build several web sites over the course of the degree.
+                                </li>
+                                <li>
+                                    Using both Adobe creative suite and open source alternatives for creating
+                                    graphics and
+                                    manipulating images to assist in web design modules.
+                                </li>
+                                <li>
+                                    Developed skills using a variety of back end web technologies including: PHP,
+                                    Symfony PHP
+                                    Framework, MySQL and SQLite, to store data support the web sites created in the
+                                    degree.
+                                </li>
+                                <li>
+                                    Keen interest in HCI and Interaction design developed through creating personas,
+                                    wire
+                                    frames, Hierarchical Task Analysis diagrams and physical prototypes.
+                                </li>
+                                <li>
+                                    Experience with developing Android mobile applications as part of a team project
+                                    and mobile
+                                    development module in documentation, programming and designing roles.
+                                </li>
+                                <li>
+                                    Experience with setting up and maintaining web servers using Linux based
+                                    operating systems
+                                    such as redhat.
+                                </li>
+                                <li>
+                                    A decent level of experience with programming in Java and some experience with
+                                    nesC and
+                                    assembly level languages.
+                                </li>
+                            </ul>
+
+                            <h4>Notable Modules:</h4>
+                            {% set notmod = [ 'Programming I & II (Java)', 'Website Design and Construction', 'Database Technology', 'Computer Networks', 'Software Engineering Team Project',
+                            'Mobile Computer Systems Development', 'Introduction to Human-Computer Interaction', 'Advanced Interaction Design', 'Website Construction and Management (Server-side)' ] %}
+                            <ul>
+                                {% for i in 0..notmod|length-1 %}
+                                    <li>
+                                        {{ notmod[i] }}
+                                    </li>
+                                {% endfor %}
+
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <img src="{{ asset('bundles/framework/images/cv/nclWeb.png') }}" alt="NewcastleUni"
+                                 class="img-responsive img-rounded cntr" id="NewcastleUniImg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a data-toggle="collapse" data-parent="#education" href="#collapseBROCK">
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-lg-6 "><h2 class="panel-title">Brockenhurst College 2011-2013</h2></div>
+                        <div class="col-lg-6 right"><span class="glyphicon glyphicon-collapse-down"></span></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <div id="collapseBROCK" class="panel-collapse collapse">
+            <div class="panel-body">
+                <h3>Btec Level 3 Extended Diploma: ICT Practitioner</h3>
+                <p>Distinction*, Distinction*, Distinction*</p>
+                <br/>
+
+                <h3>Cisco CCNA Exploration: Network Fundamentals</h3>
+                <div class="container-fluid">
+                    <img src="{{ asset('bundles/framework/images/cv/Cisco_CCNA.png') }}" class="cvIcon caption"/>
+                    <p class="caption">Pass</p>
+                </div>
+
+                <br/>
+                <h3>Microsoft Office Specialist 2010:</h3>
+                <div class="container-fluid">
+                    <img src="{{ asset('bundles/framework/images/cv/Word.png') }}" class="cvIcon"
+                         alt="Microsoft Word"/>
+                    <img src="{{ asset('bundles/framework/images/cv/powerpoint.png') }}" class="cvIcon"
+                         alt="Microsoft Powerpoint"/>
+                    <img src="{{ asset('bundles/framework/images/cv/Access.png') }}" class="cvIcon"
+                         alt="Microsoft Word Access"/>
+                    <img src="{{ asset('bundles/framework/images/cv/Outlook.png') }}" class="cvIcon"
+                         alt="Microsoft Outlook"/>
+                    <img src="{{ asset('bundles/framework/images/cv/Excel.png') }}" class="cvIcon"
+                         alt="Microsoft Excel"/>
+                </div>
+
+            </div>
+        </div>
+        <a data-toggle="collapse" data-parent="#education" href="#collapseNVQ">
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-lg-6 "><h2 class="panel-title">City and Guilds 2010-2011</h2></div>
+                        <div class="col-lg-6 right"><span class="glyphicon glyphicon-collapse-down"></span></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <div id="collapseNVQ" class="panel-collapse collapse">
+            <div class="panel-body">
+                <h3>Level 2 NVQ in Hospitality: Professional Cookery</h3>
+                <div class="container-fluid">
+                    <img src="{{ asset('bundles/framework/images/cv/city&guilds.gif') }}" class="cvIcon caption"
+                         alt="City & Guilds"/>
+                    <p class="caption">Pass</p>
+                </div>
+
+            </div>
+        </div>
+        <a data-toggle="collapse" data-parent="#education" href="#collapseBP">
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-lg-6 "><h2 class="panel-title">Barton Peveril College 2009-2010</h2></div>
+                        <div class="col-lg-6 right"><span class="glyphicon glyphicon-collapse-down"></span></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+
+        <div id="collapseBP" class="panel-collapse collapse">
+            <div class="panel-body">
+                <h3>A-Levels</h3>
+                {% set alvls = [{ 'sub': 'Advanced Subsidary: English Language', 'grade': '(d)' }, { 'sub': 'Advanced GCE: Applied ICT', 'grade': '(D)' }] %}
+                <table class="table-striped cntr resTable">
+                    <thead>
+                    <tr>
+                        <th>SUBJECT</th>
+                        <th>GRADE ACHIEVED</th>
+                    </tr>
+                    <thead>
+                    <tbody>
+                    {% for item in alvls %}
+                        <tr>
+                            <td>{{ item.sub }}</td>
+                            <td>{{ item.grade }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <a data-toggle="collapse" data-parent="#education" href="#collapseMBS">
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-lg-6 "><h2 class="panel-title">The Mountbatten School 2004-2009</h2></div>
+                        <div class="col-lg-6 right"><span class="glyphicon glyphicon-collapse-down"></span></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+
+        <div id="collapseMBS" class="panel-collapse collapse">
+            <div class="panel-body">
+                <h2>GCSEs</h2>
+                {% set gcses = [ { 'sub': 'Mathematics', 'grade': 'B' }, { 'sub': 'English', 'grade': 'B' }, { 'sub': 'Science', 'grade': 'B' }, { 'sub': 'Additional Science', 'grade': 'C' },
+                { 'sub': 'Information Communication Technology', 'grade': 'A' }, { 'sub': 'Drama', 'grade': 'A' }, { 'sub': 'Media Studies', 'grade': 'B' }, { 'sub': 'History', 'grade': 'B' },
+                { 'sub': 'French', 'grade': 'B' }, { 'sub': 'German', 'grade': 'C' }] %}
+
+                <table class="table-striped cntr resTable">
+                    <thead>
+                    <tr>
+                        <th>SUBJECT</th>
+                        <th>GRADE ACHIEVED</th>
+                    </tr>
+                    <thead>
+                    <tbody>
+                    {% for item in gcses %}
+                        <tr>
+                            <td>{{ item.sub }}</td>
+                            <td>{{ item.grade }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="cntr">
+            <hr/>
+            <span class="glyphicon glyphicon-wrench"></span>
+            <h1>Work Experience</h1>
+            <hr/>
+        </div>
+
+        <div class="panel-group" id="workxp">
+
+            <a data-toggle="collapse" data-parent="#workxp" href="#chef">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-lg-6 "><h2 class="panel-title">Trainee Chef 2010-2013</h2></div>
+                            <div class="col-lg-6 right"><span class="glyphicon glyphicon-collapse-down"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div id="chef" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <div class="cntr">
+                        <h3>Employer: </h3>
+                        <p>The Old House at Home, Public House, Romsey.</p>
+                        <h3>Position: </h3>
+                        <p>Trainee Chef / Kitchen Assistant</p>
+
+                        <h3>Job Roles and responsibilities:</h3>
+                        <ul>
+                            <li>
+                                Preparing and cooking a variety of dishes to a high standard.
+                            </li>
+                            <li>
+                                Setting up and closing the kitchen.
+                            </li>
+                            <li>
+                                Maintaining high standards of hygiene and ensuring that stock was being correctly dated
+                                and
+                                rotated.
+                            </li>
+                            <li>
+                                Effective teamwork and communication during service while working with a small team of
+                                two
+                                to three other team members.
+                            </li>
+                            <li>
+                                Working independently and efficiently in the gaps in service to ensure that the team was
+                                well stocked and prepared.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="container-fluid cntr">
+                        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+                        <div class="cntr" style='overflow:hidden;height:250px;width:75%;'>
+                            <div id='gmap_canvas' class="cntr" style='height:250px;width:75%;'></div>
+                            <div>
+                                <small><a href="http://embedgooglemaps.com"> embed google maps </a></small>
+                            </div>
+                            <div>
+                                <small><a href="https://privacypolicytemplate.net">privacy policy example</a></small>
+                            </div>
+                        </div>
+
+                        <script type='text/javascript'>function init_map() {
+                                var myOptions = {
+                                    zoom: 10,
+                                    center: new google.maps.LatLng(50.98893, -1.4965799999999945),
+                                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                                };
+                                map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+                                marker = new google.maps.Marker({
+                                    map: map,
+                                    position: new google.maps.LatLng(50.98893, -1.4965799999999945)
+                                });
+                                infowindow = new google.maps.InfoWindow({content: '<strong>The Old House At Home</strong><br/>62 Love Ln, Romsey SO51 8DE<br/>'});
+                                google.maps.event.addListener(marker, 'click', function () {
+                                    infowindow.open(map, marker);
+                                });
+                                infowindow.open(map, marker);
+                            }
+                            google.maps.event.addDomListener(window, 'load', init_map);</script>
+                    </div>
+                </div>
+            </div>
+
+            <a data-toggle="collapse" data-parent="#workxp" href="#ka">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-lg-6 "><h2 class="panel-title">Kitchen Assistant 2009-2010</h2></div>
+                            <div class="col-lg-6 right"><span class="glyphicon glyphicon-collapse-down"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div id="ka" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="cntr">
+                        <h3>Employer: </h3>
+                        <p>The Old House at Home, Public House, Romsey.</p>
+                        <h3>Position: </h3>
+                        <p>Kitchen Assistant</p>
+
+                        <ul>
+                            <li>
+                                Efficiently managing loads of dishes to be washed and dried.
+                            </li>
+                            <li>
+                                Basic food preparation including vegetables and desserts.
+                            </li>
+                            <li>
+                                Assisting head chef by clearing down and ensuring that the working environment was clear
+                                and
+                                tidy.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <a data-toggle="collapse" data-parent="#workxp" href="#stk">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-lg-6 "><h2 class="panel-title">Stacker 2013-2016</h2></div>
+                            <div class="col-lg-6 right"><span class="glyphicon glyphicon-collapse-down"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div id="stk" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="cntr">
+                        <h3>Employer: </h3>
+                        <p>East Brothers Timber, Salisbury.</p>
+                        <h3>Position: </h3>
+                        <p>Stacker / Saw Operator</p>
+
+
+                        <ul>
+                            <li>Maintaining and running an industrial saw.</li>
+                            <li>Ensuring that health and safety procedures were being followed.</li>
+                            <li>Ensuring quality control as well as communicating with colleagues to ensure the smooth
+                                operation of the mill.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="container-fluid">
+                        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+                        <div class="cntr" style='overflow:hidden;height:250px;width:75%;'>
+                            <div id='gmap_east' class="cntr" style='height:250px;width:75%;'></div>
+                            <div>
+                                <small><a href="http://embedgooglemaps.com"> embed google maps </a></small>
+                            </div>
+                            <div>
+                                <small><a href="https://termsandcondiitionssample.com">terms and conditions sample</a>
+                                </small>
+                            </div>
+                        </div>
+                        <script type='text/javascript'>function init_map() {
+                                var myOptions = {
+                                    zoom: 15,
+                                    center: new google.maps.LatLng(51.04093049999999, -1.6348361999999952),
+                                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                                };
+                                map = new google.maps.Map(document.getElementById('gmap_east'), myOptions);
+                                marker = new google.maps.Marker({
+                                    map: map,
+                                    position: new google.maps.LatLng(51.04093049999999, -1.6348361999999952)
+                                });
+                                infowindow = new google.maps.InfoWindow({content: '<strong>East Brothers Timber</strong><br>West Dean Sawmills, Salisbury SP5 1JA<br>'});
+                                google.maps.event.addListener(marker, 'click', function () {
+                                    infowindow.open(map, marker);
+                                });
+                                infowindow.open(map, marker);
+                            }
+                            google.maps.event.addDomListener(window, 'load', init_map);</script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 {% endblock %}
